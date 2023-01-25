@@ -27,7 +27,7 @@ public class SplitStrings {
     }
 
     public static void main(String[] args) {
-        System.out.println(solution("abc"));
+        System.out.println(Arrays.toString(solution("abc")));
 
     }
 }
