@@ -19,10 +19,10 @@ public class Main {
     public static void main(String[] args) {
 
 
-        String[][] a = new String[][]{{"9:00", "10:00"}, {"11:00", "12:00"}};
+        String[][] a = new String[][]{{"9:00", "10:00"}, {"11:00", "12:00"},{"14:00", "18:00"}};
         ArrayList<Double> c = new ArrayList<>();
         Double[][] b = new Double[a.length][2];
-        Double[] e ;
+        Double[] e;
 
         for (String[] strings : a) {
             for (String strings2 : strings) {
@@ -32,13 +32,18 @@ public class Main {
 
         System.out.println(Arrays.toString(new ArrayList[]{c}));
 
+        int n = 0;
+        int m = 0;
 
-        for (int i = 0; i < a.length; i++) {
-            for (int j = 0; j < 4; j++) {
-                b[i][0] = c.get(i);
-                b[i][1] = c.get(j);
-
+        for (int i = 0; i < c.size(); i++) {
+            b[n][m] = c.get(i);
+            if(m == 1 && n < a.length){
+                m = 0;
+                n++;
+            } else {
+                m++;
             }
+
         }
 
 
